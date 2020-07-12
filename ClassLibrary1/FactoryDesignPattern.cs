@@ -19,9 +19,9 @@ namespace DesignPattern
     {
         public static bool isValidate(string number)
         {
-            if (number.Length != 15)
+            if (number.Length != 13 && number.Length != 16)
                 return false;
-            return (number[0] == '3' && (number[1] == '4' || number[1] == '7'));
+            return (number[0] == '4');
         }
     }
     // Concrete product
@@ -40,11 +40,10 @@ namespace DesignPattern
     {
         public static bool isValidate(string number)
         {
-            if (number.Length != 16)
+            if (number.Length != 15)
                 return false;
-            return (number[0] == '5'
-                && number[1] <= 1
-                && number[1] <= 1);
+            return (number[0] == '3'
+                && (number[1] == 4 || number[1] == 7));
         }
 
      
